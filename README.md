@@ -1,4 +1,4 @@
-# 2_cli
+# Vue3
 
 ## Project setup
 ```
