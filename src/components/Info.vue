@@ -9,16 +9,23 @@
             <li>C#</li>
         </ul>
         <p v-show="mostrarEmail">Mande uma mensagem para {{email}}</p>
+        <p>Para acessar meu Porfolio <a v-bind:href="meuLink" target="_blank">Basta clicar aqui</a></p>
+        <myPicture />
     </div>
 </template>
 <script>
+import myPicture from './Picture.vue'
 export default {
     name: 'MyInfo',
+    components: {
+        myPicture
+    },
     data() {
         return {
             estaTrabalhando: false,
             mostrarEmail: false,
-            email: 'pcsantos@outlook.com.br'
+            email: 'pcsantos@outlook.com.br',
+            meuLink: 'http://www.github.com/pcesarsantos'
         }
     }
 }
