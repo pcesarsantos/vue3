@@ -1,10 +1,10 @@
 <template>
-<form action="">
+<form action="" @submit="enviarFormulario">
     <div>
-        <InputText />
+        <input type="Text" v-model="name">
     </div>
     <div>
-        <InputText />
+        <input type="text" v-model="email">
     </div>
     <div>
         <InputSubmit />
@@ -13,14 +13,28 @@
 </template>
 
 <script>
-import InputText from './Form/InputText.vue'
+// import InputText from './Form/InputText.vue'
 import InputSubmit from './Form/InputSubmit.vue'
 
 export default {
     name: "MyForm",
     components: {
-        InputText,
+        // InputText,
         InputSubmit
+    },
+    data() {
+        return {
+            name: "",
+            email: ""
+        }
+    },
+    methods: {
+        enviarFormulario(e) {
+            e.preventDefault()
+
+            console.log(`O nome é ${this.name} e o email é ${this.email}`)
+            console.log('Formulario enviado')
+        }
     }
 }
 </script>
