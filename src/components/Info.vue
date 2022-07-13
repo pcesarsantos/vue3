@@ -8,6 +8,9 @@
             <li>PHP</li>
             <li>C#</li>
         </ul>
+        <div>
+            <button @click="showEmail">Mostrar e-mail</button>
+        </div>
         <p v-show="mostrarEmail">Mande uma mensagem para {{email}}</p>
         <p>Para acessar meu Porfolio <a v-bind:href="meuLink" target="_blank">Basta clicar aqui</a></p>
         <myPicture />
@@ -26,6 +29,11 @@ export default {
             mostrarEmail: false,
             email: 'pcsantos@outlook.com.br',
             meuLink: 'http://www.github.com/pcesarsantos'
+        }
+    },
+    methods: {
+        showEmail() {
+            this.mostrarEmail = !this.mostrarEmail
         }
     }
 }

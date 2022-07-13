@@ -14,11 +14,18 @@ export default {
         setTimeout(() => {
             this.nome = 'Pedro'
         }, 1000)       
+        this.lifeClycle('Created')
     },
     mounted() {
         setTimeout(() => {
             this.nome = 'Pedro César'
         }, 2000)
+        this.lifeClycle('Mounted')
+    },
+    methods: {
+        lifeClycle(mensagem) {
+            console.log(`etapa: ${mensagem}`)
+        }
     }
 
 }
