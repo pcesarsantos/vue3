@@ -25,11 +25,15 @@ export default {
     components: {
         myPicture
     },
+    props: {
+        email: String,
+        estaTrabalhando: Boolean
+    },
     data() {
         return {
-            estaTrabalhando: false,
+            // estaTrabalhando: false,
             mostrarEmail: false,
-            email: 'pcsantos@outlook.com.br',
+            // email: 'pcsantos@outlook.com.br',
             meuLink: 'http://www.github.com/pcesarsantos',
             backendTechnologies: ['JavaScript','PHP', 'C#'],
             frontendTechnologies: [

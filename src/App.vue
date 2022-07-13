@@ -1,6 +1,6 @@
 <template>
   <div>
-    <myHeader />
+    <myHeader :estaLogado="true" />
     <PrimeiroComponente />
     <p class="paragrafo-pai">
       o dado de app é: {{ testando }}
